@@ -12,7 +12,11 @@
         tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
     -->
     <?php
-        
+        $numbers = [];
+        while (count($numbers) != 15) {
+            $rndNumber = rand(1, 100);
+            if (!in_array($rndNumber, $numbers)) $numbers[] = $rndNumber;
+        }
     ?>
 </body>
 </html>
