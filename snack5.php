@@ -8,12 +8,18 @@
 </head>
 <body>
     <!--
-        Prendere un paragrafo abbastanza lungo, contenente diverse frasi.
-        Prendere il paragrafo e suddividerlo in tanti paragrafi.
+        Prendere un paragrafo abbastanza lungo, contenente diverse frasi,
+        suddividerlo in tanti paragrafi.
         Ogni punto un nuovo paragrafo.
     -->
     <?php
-    
+        $longParagraph = "Lorem ipsum dolor sit amet. consectetur adipisicing elit. Officiis facilis suscipit ut eaque rem et ipsum perspiciatis quisquam. consequatur? Amet, rerum voluptate. Ipsum eligendi sapiente repellendus. nostrum, fugiat quia quod?";
+        $paragraphs = explode('.', $longParagraph);
     ?>
+    <div style = "display:flex; flex-direction:column; justify-content: center; align-items:center; height: 100vh;">
+        <?php foreach ($paragraphs as $paragraph) { ?>
+            <p> <?php echo $paragraph ?></p>
+        <?php } ?>
+    </div>
 </body>
 </html>
